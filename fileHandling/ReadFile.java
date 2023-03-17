@@ -13,6 +13,7 @@ public class ReadFile {
             BufferedReader bufferreader = new BufferedReader(filereader); // char value to string
             String x = bufferreader.readLine();
             // bufferreader le read gareko String lai 'X' variable ma store gareko
+            bufferreader.close();
             System.out.println(x);
         } catch (Exception e) {
             System.out.println("Error : " + e);

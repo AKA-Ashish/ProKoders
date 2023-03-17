@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FactoryMethods",
+            "request": "launch",
+            "mainClass": "iNetAddress.FactoryMethods",
+            "projectName": "ProKoders_42db2ee0"
+        },
+        {
+            "type": "java",
+            "name": "INetAddressMethods",
+            "request": "launch",
+            "mainClass": "iNetAddress.INetAddressMethods",
+            "projectName": "ProKoders_42db2ee0"
+        },
+        {
+            "type": "java",
             "name": "CreateFile",
             "request": "launch",
             "mainClass": "fileHandling.CreateFile",
