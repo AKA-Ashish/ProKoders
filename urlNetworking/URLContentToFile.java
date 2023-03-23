@@ -2,7 +2,6 @@ package urlNetworking;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
-import java.io.Writer;
 import java.io.BufferedReader;
 import java.net.URL;
 import java.net.URLConnection;
