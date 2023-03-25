@@ -13,6 +13,9 @@ public class Inheritator extends Implementor{
 
         // MouseListener implemented by Parent class and we inherited that
         button.addMouseListener(this);
+        
+        // ActionListerner implemented by Parent class and we inherited that
+        button.addActionListener(this);
 
         // JFrame extended by Parent class and we Inherited that class 
         add(button);
@@ -23,8 +26,15 @@ public class Inheritator extends Implementor{
         setVisible(true);
     }
 
+    // HERE, we are able to use multiple types of EvenListener's by inheriting just one class instead of implementing multiple listeners. 
+
     @Override
-   public void mouseClicked(MouseEvent e){
-    System.out.println("Mouse Clicked Success");
+   public void mouseEntered(MouseEvent e){
+    System.out.println("Mouse Entered");
+   }
+
+   @Override
+   public void actionPerformed(ActionEvent e){
+    System.out.println("Button Clicked");
    }
 }
