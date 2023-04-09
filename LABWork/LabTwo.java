@@ -12,7 +12,7 @@ public class LabTwo {
    File file = new File("sample.html");
    file.createNewFile();
 
-   // Creating FileWriter to writed Fetched Url content into the File
+   // Creating FileWriter to write Fetched Url content into the File
    FileWriter file_writer = new FileWriter(file);
 
    // Fetch URL content
