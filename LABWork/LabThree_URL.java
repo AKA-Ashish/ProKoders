@@ -1,6 +1,6 @@
 import java.net.*;
 
-public class LabThree {
+public class LabThree_URL {
  public static void main(String[] args) {
 
   // LAB 3

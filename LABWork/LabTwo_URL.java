@@ -1,7 +1,7 @@
 import java.net.*;
 import java.io.*;
 
-public class LabTwo {
+public class LabTwo_URL {
  public static void main(String[] args) {
 
   // Lab 2
