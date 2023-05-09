@@ -13,6 +13,7 @@ class LoginAuthenticateTwo {
     String username_input = scanner.nextLine();
     System.out.print("Enter Password : ");
     String password_input = scanner.nextLine();
+    scanner.close();
 
     // SQL Query
     String select_query = "SELECT * FROM User WHERE fullname = '" + username_input + "' AND password = '"

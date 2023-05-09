@@ -11,5 +11,7 @@ public class LabFive_ServerSocket {
   Socket client_socket = server_socket.accept();
   // getLocalSocketAddress() returns client ko address
   System.out.println("Connection Established ! " + client_socket.getLocalSocketAddress());
+
+  server_socket.close();
  }
 }

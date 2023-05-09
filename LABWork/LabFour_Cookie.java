@@ -1,6 +1,5 @@
 import java.net.*;
 import java.util.List;
-import java.io.*;
 
 class LabFour_Cookie {
  public static void main(String[] args) throws URISyntaxException {

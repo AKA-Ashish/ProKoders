@@ -10,5 +10,6 @@ public class LabFive_ClientSocket {
   // getRemoteSocketAddress() returns address of connected system(server)
   System.out.println("Connected to Server" + socket.getRemoteSocketAddress());
 
+  socket.close();
  }
 }

@@ -19,18 +19,18 @@ public class Cookie {
 
     // Creating HTTP Cookie with 'Key' 'Value' Pairs
     HttpCookie cookie_one = new HttpCookie(
-      "Cookie_Key_One",
-      "Cookie_Value_One"
-    );
+        "Cookie_Key_One",
+        "Cookie_Value_One");
     HttpCookie cookie_two = new HttpCookie(
-      "Cookie_Key_Two",
-      "Cookie_Value_Two"
-    );
+        "Cookie_Key_Two",
+        "Cookie_Value_Two");
 
-    // cookie_manager used to manage cookies i.e. Add Cookie accoring to HTTP Response and Fetch Cookie according to HTTP Request
+    // cookie_manager used to manage cookies i.e. Add Cookie accoring to HTTP
+    // Response and Fetch Cookie according to HTTP Request
     CookieManager cookie_manager = new CookieManager();
 
-    // cookie_store uses cookie_manager method called getCookieStore() to retrieve the cookies that are managed by the cookie manager.
+    // cookie_store uses cookie_manager method called getCookieStore() to retrieve
+    // the cookies that are managed by the cookie manager.
     CookieStore cookie_store = cookie_manager.getCookieStore();
 
     // cookie_store ma yo cookie yo link ko ho vanera store gareko
@@ -39,7 +39,7 @@ public class Cookie {
     cookie_store.add(uri_two, cookie_two);
 
     // list stores all the cookies stored in cookie_store in ArrayForm[]
-    List list = cookie_store.getCookies();
+    List<?> list = cookie_store.getCookies();
     System.out.println("Stored Cookies : " + list);
 
     // Removing Cookie by name

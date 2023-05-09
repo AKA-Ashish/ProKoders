@@ -4,6 +4,7 @@ import java.net.*;
 import java.io.*;
 import java.util.Scanner;
 
+@SuppressWarnings("resource")
 public class Client_One {
  public static void main(String[] args) {
 

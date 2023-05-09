@@ -1,18 +1,14 @@
 package urlHeaderFieldMethods;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Arrays;
-import java.util.Date;
+import java.io.*;
+import java.net.*;
+import java.util.*;
 
+@SuppressWarnings("unused")
 class URLHeaderMethods {
 
   public static void main(String[] args)
-    throws MalformedURLException, IOException {
+      throws MalformedURLException, IOException {
     URL url = new URL("https://www.google.com");
     URLConnection uc = url.openConnection();
 
@@ -44,15 +40,19 @@ class URLHeaderMethods {
     // <------------------------------------------------------------------------------------------->
 
     // 7.returns contents of resources in , text -> string , binary ->byte[]
-    // Note : String vaye not ARRAY,single line single variable mai sab hunxa , BYTE vaye Array FORM
+    // Note : String vaye not ARRAY,single line single variable mai sab hunxa , BYTE
+    // vaye Array FORM
     System.out.println("7.getContent() as Obj : " + uc.getContent());
 
-    // getContent through fetch gareko unknown content type lai Object variable ma store gareko
+    // getContent through fetch gareko unknown content type lai Object variable ma
+    // store gareko
     Object get_content_obj = uc.getContent();
 
-    // We dont know getContent bata Text/Binary data aayo ? so, algorithm ko through convert gareko
+    // We dont know getContent bata Text/Binary data aayo ? so, algorithm ko through
+    // convert gareko
 
-    // If fetched content is text/html (String) then converting to String and Printing
+    // If fetched content is text/html (String) then converting to String and
+    // Printing
     if (get_content_obj instanceof String) {
       String get_content_isString = (String) get_content_obj;
       System.out.println("Content as a String: " + get_content_isString);
@@ -60,8 +60,7 @@ class URLHeaderMethods {
     } else if (get_content_obj instanceof byte[]) {
       byte[] get_content_isByte = (byte[]) get_content_obj;
       System.out.println(
-        "Content as a byte array: " + Arrays.toString(get_content_isByte)
-      );
+          "Content as a byte array: " + Arrays.toString(get_content_isByte));
     } else {
       System.out.println("Content type not recognized");
     }
@@ -72,15 +71,17 @@ class URLHeaderMethods {
     String contentType = uc.getHeaderField("Content-Type");
     System.out.println("8.Content-Type: " + contentType);
 
-    //  9.InputStream le full webcontent fetch gareko
+    // 9.InputStream le full webcontent fetch gareko
     InputStream input_stream = uc.getInputStream();
     int input;
-    // variable form mai print gareko just to be clear,below is the code that prints the contents fully
+    // variable form mai print gareko just to be clear,below is the code that prints
+    // the contents fully
     System.out.print("9." + input_stream);
     while ((input = input_stream.read()) != -1) {
       // System.out.print((char)input);
     }
-    // 10.output_stream used to write data to the output stream, which will be sent to the server.
+    // 10.output_stream used to write data to the output stream, which will be sent
+    // to the server.
     // uc.setDoOutput(false);
     // OutputStream output_stream = uc.getOutputStream();
 

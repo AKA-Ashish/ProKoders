@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 
+@SuppressWarnings("resource")
 public class ClientSide {
  public static void main(String[] args) throws UnknownHostException, IOException {
   Scanner scanner = new Scanner(System.in);
