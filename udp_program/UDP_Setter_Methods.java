@@ -2,7 +2,7 @@ package udp_program;
 
 import java.net.*;
 
-public class UDP_Setter_Methods {
+class UDP_Setter_Methods {
  public static void main(String[] args) {
 
   try {

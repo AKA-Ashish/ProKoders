@@ -2,7 +2,7 @@ package udp_program;
 
 import java.net.*;
 
-public class UDP_Getter_Methods {
+class UDP_Getter_Methods {
  public static void main(String[] args) {
 
   try {

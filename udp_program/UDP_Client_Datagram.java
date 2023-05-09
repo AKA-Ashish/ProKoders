@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.*;
 
 class UDP_Client_Datagram {
-
  public static void main(String[] args) {
 
   try {
