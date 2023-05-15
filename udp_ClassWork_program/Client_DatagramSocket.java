@@ -1,7 +1,10 @@
 import java.net.*;
+import java.util.*;
 
 public class Client_DatagramSocket {
  public static void main(String[] args) {
+
+  Scanner scanner = new Scanner(System.in);
 
   try {
 
@@ -11,7 +14,16 @@ public class Client_DatagramSocket {
 
    int port = 5000;
 
-   byte[] buffer = { 12, 13 };
+   // getting user input for sending data
+   System.out.print("Enter first Number : ");
+   byte x = scanner.nextByte();
+   scanner.nextLine();
+   System.out.print("Enter second Number : ");
+   byte y = scanner.nextByte();
+   scanner.nextLine();
+   scanner.close();
+
+   byte[] buffer = { x, y };
    byte[] buffer1 = new byte[2];
 
    // Connecting Socket to server
@@ -37,7 +49,9 @@ public class Client_DatagramSocket {
 
    datagram_socket.receive(receive);
 
-   System.out.println("Data Received : " + receive.getData());
+   System.out.println("Data Received in Array : " + receive.getData()); // gets data in arrayform
+
+   System.out.println("Data Received : " + Arrays.toString(receive.getData()));
 
    // Adding Delay of 100ms
    datagram_socket.setSoTimeout(100);
