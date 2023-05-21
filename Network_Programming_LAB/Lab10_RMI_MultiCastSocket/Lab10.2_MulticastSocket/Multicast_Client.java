@@ -4,7 +4,7 @@ import java.net.MulticastSocket;
 
 // We can create multiple clients and all of them will receive the data sended by Multicast Server
 @SuppressWarnings("resource")
-public class Multicast_Client {
+class Multicast_Client {
  public static void main(String[] args) {
 
   try {
